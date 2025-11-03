@@ -39,6 +39,11 @@ process. This hurdle can heavily hinder the development of this field. To addres
   </div>
 </div>
 
+### Performance vs. Inference Cost
+<div style="margin: 20px 0;">
+  <h4>🎯 Performance and Inference under different NFEsk</h4>
+  <img src="./figure/Inference_Cost.png" width="100%" height="auto" style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+</div>
 
 
 ## 📚 Citation
