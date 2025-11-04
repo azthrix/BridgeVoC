@@ -137,19 +137,19 @@ cd starts/train
 
 ### Rank Analysis
 <div style="margin: 20px 0;">
-  <h4>🎯 Bubble Figure on LibriTTS Benchmark</h4>
+  <h4>🎯 Rank Comparisons with Other Acoustic Degradations</h4>
   <img src="./figure/rank_analysis.png" width="100%" height="auto" style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 </div>
 
 ### Overall Framework
 <div style="margin: 20px 0;">
-  <h4>🎯 Bubble Figure on LibriTTS Benchmark</h4>
+  <h4>🎯 Overall Network Framework of the Proposed BCD</h4>
   <img src="./figure/overall_framework.png" width="100%" height="auto" style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 </div>
 
 ### Single-step Distillation Framework
 <div style="margin: 20px 0;">
-  <h4>🎯 Bubble Figure on LibriTTS Benchmark</h4>
+  <h4>🎯 Single-step Distillation</h4>
   <img src="./figure/single_step_distillation.png" width="100%" height="auto" style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 </div>
 
