@@ -280,7 +280,7 @@ class Specs(Dataset):
         return X_compress, Y_compress, audio
 
     def __len__(self):
-        return 500 if self.subset=='train' else len(self.wav_files)
+        return len(self.wav_files)
 
 
 class SpecsDataModule(pl.LightningDataModule):
@@ -299,7 +299,7 @@ class SpecsDataModule(pl.LightningDataModule):
         parser.add_argument("--sampling_rate", type=int, required=True, default=24000, 
                             help="Sampling rate.")
         parser.add_argument("--n_fft", type=int, required=True, default=1024, 
-                            help="Number of FFT bins. 510 by default.")   # to assure 256 freq bins
+                            help="Number of FFT bins.")   # to assure 256 freq bins
         parser.add_argument("--num_mels", type=int, required=True, default=100, 
                             help="Number of mels.")
         parser.add_argument("--hop_size", type=int, required=True, default=256, 

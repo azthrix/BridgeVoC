@@ -288,7 +288,7 @@ class BridgeGAN(SDE, nn.Module):
                             help="Offset for time discrete.")
         parser.add_argument("--predictor", type=str, required=False, default="x0", choices=["x0", "hpsi"],
                             help="Type of training object.")
-        parser.add_argument("--sampling_type", type=str, required=True, default="sde_first_order", 
+        parser.add_argument("--sampling_type", type=str, required=False, default="sde_first_order", 
                             choices=["sde_first_order", "ode_first_order"],
                             help="Sampling type in the inference.")
         return parser
