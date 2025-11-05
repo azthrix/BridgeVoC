@@ -182,7 +182,7 @@ cd starts/train
   <img src="./figure/Inference_Cost.png" width="100%" height="auto" style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 </div>
 
-### Performance Ccaling with DiT Backbones
+### Performance Scaling with DiT Backbones
 #### Our method is the first to surpass 4.50 in PESQ when only scaling to 29.18 M, and also notably outperforms DiT with ~0.36B parameters.
 #### We also support for edge-device processing, with the parameters as few as 0.19 M • 1.60 GMACs/5s per NFE.
 <div style="margin: 20px 0;">
